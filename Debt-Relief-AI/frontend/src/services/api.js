@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://ai-pdrp.onrender.com',
+    baseURL: 'https://ai-pdrp.onrender.com/api',
 });
 
 api.interceptors.request.use((config) => {
