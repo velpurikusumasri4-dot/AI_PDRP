@@ -12,7 +12,7 @@ from datetime import timedelta
 
 router = APIRouter(tags=["Authentication"])
 
-@router.post("/register", response_model=UserResponse)
+@router.post("/", response_model=UserResponse)
 def register(user: UserCreate, db: Session = Depends(get_db)):
     db_user = db.query(User).filter(User.email == user.email).first()
     if db_user:
