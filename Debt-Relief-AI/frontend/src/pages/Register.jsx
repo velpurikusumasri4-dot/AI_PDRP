@@ -5,7 +5,13 @@ import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
 
 const Register = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', password: '', phone: '' });
+    const [formData, setFormData] = useState({ 
+        name: '', 
+        email: '', 
+        password: '', 
+        phone: '' 
+    });
+
     const { register } = useContext(AuthContext);
     const navigate = useNavigate();
 
